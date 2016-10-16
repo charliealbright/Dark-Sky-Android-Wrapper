@@ -16,6 +16,9 @@ public class Forecast {
     @SerializedName("currently")
     private CurrentConditions currentConditions;
 
+    @SerializedName("minutely")
+    private MinutelyForecast minutelyForecast;
+
     @Override
     public String toString() {
         return "Forecast:\n" +
@@ -23,6 +26,7 @@ public class Forecast {
                 "\t\tLongitude: " + longitude + "\n" +
                 "\t\tTimezone: " + timezone + "\n" +
                 "\t\tOffset: " + offset + "\n" +
-                "\t\tCurrently: " + currentConditions.toString() + "\n";
+                "\t\tCurrently: " + currentConditions.toString() + "\n" +
+                "\t\tMinutely: " + minutelyForecast.toString() + "\n";
     }
 }
