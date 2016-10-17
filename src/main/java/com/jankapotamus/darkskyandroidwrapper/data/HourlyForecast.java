@@ -8,7 +8,7 @@ import java.util.List;
  * Created by Charlie on 10/16/16.
  */
 
-public class MinutelyForecast {
+public class HourlyForecast {
 
     private String summary;
 
@@ -16,11 +16,11 @@ public class MinutelyForecast {
     private String iconString;
 
     @SerializedName("data")
-    private List<MinuteConditions> minutelyConditionsList;
+    private List<HourConditions> hourlyConditionsList;
 
     @Override
     public String toString() {
-        return "{MinutelyForecast: [Summary = " + summary + "][IconString = " + iconString +
-                "][MinutelyConditionsList = " + minutelyConditionsList.toString() + "]}";
+        return "{HourlyForecast: [Summary = " + summary + "][IconString = " + iconString +
+                "][HourlyConditionsList = " + hourlyConditionsList.toString() + "]}";
     }
 }

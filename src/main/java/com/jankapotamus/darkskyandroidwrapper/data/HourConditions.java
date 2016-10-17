@@ -6,14 +6,14 @@ import com.google.gson.annotations.SerializedName;
  * Created by Charlie on 10/16/16.
  */
 
-public class CurrentConditions {
+public class HourConditions {
 
     private int time;
     private String summary;
+
     @SerializedName("icon")
     private String iconString;
-    private int nearestStormDistance;
-    private int nearestStormBearing;
+
     private double precipIntensity;
     private double precipProbability;
     private double temperature;
@@ -29,9 +29,8 @@ public class CurrentConditions {
 
     @Override
     public String toString() {
-        return "{CurrentConditions: [Time = " + time + "][Summary = " + summary + "][IconString = "
-                + iconString + "][NearestStormDistance = " + nearestStormDistance + "][NearestStormBearing = "
-                + nearestStormBearing + "][PrecipIntensity = " + precipIntensity + "][PrecipProbability = "
+        return "{HourConditions: [Time = " + time + "][Summary = " + summary + "][IconString = "
+                + iconString + "][PrecipIntensity = " + precipIntensity + "][PrecipProbability = "
                 + precipProbability + "][Temperature = " + temperature + "][ApparentTemperature = "
                 + apparentTemperature + "][DewPoint = " + dewPoint + "][Humidity = " + humidity
                 + "][WindSpeed = " + windSpeed + "][WindBearing = " + windBearing + "][Visibility = "

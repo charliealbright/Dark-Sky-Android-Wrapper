@@ -7,8 +7,8 @@ package com.jankapotamus.darkskyandroidwrapper.data;
 public class MinuteConditions {
 
     private int time;
-    private int precipIntensity;
-    private int precipProbability;
+    private double precipIntensity;
+    private double precipProbability;
 
     @Override
     public String toString() {

@@ -19,6 +19,12 @@ public class Forecast {
     @SerializedName("minutely")
     private MinutelyForecast minutelyForecast;
 
+    @SerializedName("hourly")
+    private HourlyForecast hourlyForecast;
+
+    @SerializedName("daily")
+    private DailyForecast dailyForecast;
+
     @Override
     public String toString() {
         return "Forecast:\n" +
@@ -27,6 +33,8 @@ public class Forecast {
                 "\t\tTimezone: " + timezone + "\n" +
                 "\t\tOffset: " + offset + "\n" +
                 "\t\tCurrently: " + currentConditions.toString() + "\n" +
-                "\t\tMinutely: " + minutelyForecast.toString() + "\n";
+                "\t\tMinutely: " + minutelyForecast.toString() + "\n" +
+                "\t\tHourly: " + hourlyForecast.toString() + "\n" +
+                "\t\tDaily: " + dailyForecast.toString() + "\n";
     }
 }
