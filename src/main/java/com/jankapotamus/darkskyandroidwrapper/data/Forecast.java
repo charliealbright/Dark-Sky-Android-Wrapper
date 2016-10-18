@@ -2,6 +2,8 @@ package com.jankapotamus.darkskyandroidwrapper.data;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 /**
  * Created by Charlie on 10/14/16.
  */
@@ -25,6 +27,9 @@ public class Forecast {
     @SerializedName("daily")
     private DailyForecast dailyForecast;
 
+    @SerializedName("alerts")
+    private List<Alert> alerts;
+
     @Override
     public String toString() {
         return "Forecast:\n" +
@@ -35,6 +40,7 @@ public class Forecast {
                 "\t\tCurrently: " + currentConditions.toString() + "\n" +
                 "\t\tMinutely: " + minutelyForecast.toString() + "\n" +
                 "\t\tHourly: " + hourlyForecast.toString() + "\n" +
-                "\t\tDaily: " + dailyForecast.toString() + "\n";
+                "\t\tDaily: " + dailyForecast.toString() + "\n" +
+                (alerts != null ? "\t\tAlerts: " + alerts.toString() + "\n" : "");
     }
 }
