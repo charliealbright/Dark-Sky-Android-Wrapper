@@ -11,6 +11,6 @@ import retrofit2.http.GET;
 
 public interface DarkSkyService {
 
-    @GET("/assets/mock-data.json")
+    @GET("/mock-data.json")
     Call<Forecast> getStaticForecast();
 }
