@@ -37,10 +37,10 @@ public class Forecast {
                 "\t\tLongitude: " + longitude + "\n" +
                 "\t\tTimezone: " + timezone + "\n" +
                 "\t\tOffset: " + offset + "\n" +
-                "\t\tCurrently: " + currentConditions.toString() + "\n" +
-                "\t\tMinutely: " + minutelyForecast.toString() + "\n" +
-                "\t\tHourly: " + hourlyForecast.toString() + "\n" +
-                "\t\tDaily: " + dailyForecast.toString() + "\n" +
-                (alerts != null ? "\t\tAlerts: " + alerts.toString() + "\n" : "");
+                "\t\tCurrently: " + (currentConditions != null ? currentConditions.toString() : "null") + "\n" +
+                "\t\tMinutely: " + (minutelyForecast != null ? minutelyForecast.toString() : "null") + "\n" +
+                "\t\tHourly: " + (hourlyForecast != null ? hourlyForecast.toString() : "null") + "\n" +
+                "\t\tDaily: " + (dailyForecast != null ? dailyForecast.toString() : "null") + "\n" +
+                "\t\tAlerts: " + (alerts != null ? alerts.toString() : "null") + "\n";
     }
 }
