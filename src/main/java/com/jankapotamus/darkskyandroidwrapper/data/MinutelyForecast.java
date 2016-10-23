@@ -18,6 +18,19 @@ public class MinutelyForecast {
     @SerializedName("data")
     private List<MinuteConditions> minutelyConditionsList;
 
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getIconString() {
+        return iconString;
+    }
+
+    public List<MinuteConditions> getMinutelyConditionsList() {
+        return minutelyConditionsList;
+    }
+
     @Override
     public String toString() {
         return "{MinutelyForecast: [Summary = " + summary + "][IconString = " + iconString +

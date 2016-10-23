@@ -27,6 +27,67 @@ public class HourConditions {
     private double pressure;
     private double ozone;
 
+
+    public int getTime() {
+        return time;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getIconString() {
+        return iconString;
+    }
+
+    public double getPrecipIntensity() {
+        return precipIntensity;
+    }
+
+    public double getPrecipProbability() {
+        return precipProbability;
+    }
+
+    public double getTemperature() {
+        return temperature;
+    }
+
+    public double getApparentTemperature() {
+        return apparentTemperature;
+    }
+
+    public double getDewPoint() {
+        return dewPoint;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public double getWindSpeed() {
+        return windSpeed;
+    }
+
+    public int getWindBearing() {
+        return windBearing;
+    }
+
+    public double getVisibility() {
+        return visibility;
+    }
+
+    public double getCloudCover() {
+        return cloudCover;
+    }
+
+    public double getPressure() {
+        return pressure;
+    }
+
+    public double getOzone() {
+        return ozone;
+    }
+
     @Override
     public String toString() {
         return "{HourConditions: [Time = " + time + "][Summary = " + summary + "][IconString = "

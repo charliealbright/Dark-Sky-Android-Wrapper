@@ -18,6 +18,19 @@ public class DailyForecast {
     @SerializedName("data")
     private List<DayConditions> dailyConditionsList;
 
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getIconString() {
+        return iconString;
+    }
+
+    public List<DayConditions> getDailyConditionsList() {
+        return dailyConditionsList;
+    }
+
     @Override
     public String toString() {
         return "{DailyForecast: [Summary = " + summary + "][IconString = " + iconString +

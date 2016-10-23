@@ -10,6 +10,19 @@ public class MinuteConditions {
     private double precipIntensity;
     private double precipProbability;
 
+
+    public int getTime() {
+        return time;
+    }
+
+    public double getPrecipIntensity() {
+        return precipIntensity;
+    }
+
+    public double getPrecipProbability() {
+        return precipProbability;
+    }
+
     @Override
     public String toString() {
         return "{MinuteConditions: [Time = " + time + "][PrecipIntensity = " + precipIntensity +

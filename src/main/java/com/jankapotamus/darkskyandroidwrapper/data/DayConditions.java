@@ -39,6 +39,115 @@ public class DayConditions {
     private double pressure;
     private double ozone;
 
+
+    public int getTime() {
+        return time;
+    }
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getIconString() {
+        return iconString;
+    }
+
+    public int getSunriseTime() {
+        return sunriseTime;
+    }
+
+    public int getSunsetTime() {
+        return sunsetTime;
+    }
+
+    public double getMoonPhase() {
+        return moonPhase;
+    }
+
+    public double getPrecipIntensity() {
+        return precipIntensity;
+    }
+
+    public double getPrecipIntensityMax() {
+        return precipIntensityMax;
+    }
+
+    public int getPrecipIntensityMaxTime() {
+        return precipIntensityMaxTime;
+    }
+
+    public double getPrecipProbability() {
+        return precipProbability;
+    }
+
+    public String getPrecipType() {
+        return precipType;
+    }
+
+    public double getTemperatureMin() {
+        return temperatureMin;
+    }
+
+    public int getTemperatureMinTime() {
+        return temperatureMinTime;
+    }
+
+    public double getTemperatureMax() {
+        return temperatureMax;
+    }
+
+    public int getTemperatureMaxTime() {
+        return temperatureMaxTime;
+    }
+
+    public double getApparentTemperatureMin() {
+        return apparentTemperatureMin;
+    }
+
+    public int getApparentTemperatureMinTime() {
+        return apparentTemperatureMinTime;
+    }
+
+    public double getApparentTemperatureMax() {
+        return apparentTemperatureMax;
+    }
+
+    public int getApparentTemperatureMaxTime() {
+        return apparentTemperatureMaxTime;
+    }
+
+    public double getDewPoint() {
+        return dewPoint;
+    }
+
+    public double getHumidity() {
+        return humidity;
+    }
+
+    public double getWindSpeed() {
+        return windSpeed;
+    }
+
+    public int getWindBearing() {
+        return windBearing;
+    }
+
+    public double getVisibility() {
+        return visibility;
+    }
+
+    public double getCloudCover() {
+        return cloudCover;
+    }
+
+    public double getPressure() {
+        return pressure;
+    }
+
+    public double getOzone() {
+        return ozone;
+    }
+
     @Override
     public String toString() {
         return "{DayConditions: " +

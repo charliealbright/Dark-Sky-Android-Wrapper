@@ -18,6 +18,19 @@ public class HourlyForecast {
     @SerializedName("data")
     private List<HourConditions> hourlyConditionsList;
 
+
+    public String getSummary() {
+        return summary;
+    }
+
+    public String getIconString() {
+        return iconString;
+    }
+
+    public List<HourConditions> getHourlyConditionsList() {
+        return hourlyConditionsList;
+    }
+
     @Override
     public String toString() {
         return "{HourlyForecast: [Summary = " + summary + "][IconString = " + iconString +
