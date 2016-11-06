@@ -10,6 +10,9 @@ import java.util.List;
 
 public class Forecast {
 
+    public static final String EXTEND_HOURLY_KEY = "extend";
+    public static final String EXTEND_HOURLY_VALUE = "hourly";
+
     private double latitude;
     private double longitude;
     private String timezone;
@@ -88,5 +91,91 @@ public class Forecast {
                 "\t\tDaily: " + (dailyForecast != null ? dailyForecast.toString() : "null") + "\n" +
                 "\t\tAlerts: " + (alerts != null ? alerts.toString() : "null") + "\n" +
                 "\t\tFlags: " + (flags != null ? flags.toString() : "null") + "\n";
+    }
+
+    public enum Language {
+        ARABIC("ar"),
+        AZERBAIJANI("az"),
+        BELARUSIAN("be"),
+        BOSNIAN("bs"),
+        CZECH("cs"),
+        GERMAN("de"),
+        GREEK("el"),
+        ENGLISH("en"),
+        SPANISH("es"),
+        FRENCH("fr"),
+        CROATIAN("hr"),
+        HUNGARIAN("hu"),
+        INDONESIAN("id"),
+        ITALIAN("it"),
+        ICELANDIC("is"),
+        CORNISH("kw"),
+        NORWEGIAN_BOKMAL("nb"),
+        DUTCH("nl"),
+        POLISH("pl"),
+        PORTUGUESE("pt"),
+        RUSSIAN("ru"),
+        SLOVAK("sk"),
+        SERBIAN("sr"),
+        SWEDISH("sv"),
+        TETUM("tet"),
+        TURKISH("tr"),
+        UKRAINIAN("uk"),
+        PIG_LATIN("x-pig-latin"),
+        CHINESE_SIMPLIFIED("zh"),
+        CHINESE_TRADITIONAL("zh-tw");
+
+        public static final String HTTP_QUERY_KEY = "lang";
+        private String mKey;
+
+        Language(String key) {
+            mKey = key;
+        }
+
+        @Override
+        public String toString() {
+            return mKey;
+        }
+    }
+
+    public enum Units {
+        AUTO("auto"),
+        CA("ca"),
+        UK2("uk2"),
+        US_IMPERIAL("us"),
+        SI("si");
+
+        public static final String HTTP_QUERY_KEY = "units";
+        private String mKey;
+
+        Units(String key) {
+            mKey = key;
+        }
+
+        @Override
+        public String toString() {
+            return mKey;
+        }
+    }
+
+    public enum Exclusion {
+        CURRENTLY("currently"),
+        MINUTELY("minutely"),
+        HOURLY("hourly"),
+        DAILY("daily"),
+        ALERTS("alerts"),
+        FLAGS("flags");
+
+        public static final String HTTP_QUERY_KEY = "exclude";
+        private String mKey;
+
+        Exclusion(String key) {
+            mKey = key;
+        }
+
+        @Override
+        public String toString() {
+            return mKey;
+        }
     }
 }
