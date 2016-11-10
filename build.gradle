@@ -2,18 +2,18 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'dark-sky-android'
+    bintrayName = 'darkskyandroidwrapper'
 
     publishedGroupId = 'com.charliealbright'
     libraryName = 'Dark Sky Android Wrapper'
-    artifact = 'dark-sky-android'
+    artifact = 'darkskyandroidwrapper'
 
     libraryDescription = 'An Android wrapper for the Dark Sky weather API'
 
     siteUrl = 'https://github.com/charliealbright/Dark-Sky-Android-Wrapper'
     gitUrl = 'https://github.com/charliealbright/Dark-Sky-Android-Wrapper.git'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.1.0-alpha'
 
     developerId = 'charliealbright'
     developerName = 'Charlie Albright'
@@ -29,7 +29,7 @@ android {
     buildToolsVersion "24.0.3"
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"

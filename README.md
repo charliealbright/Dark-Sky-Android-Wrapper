@@ -19,7 +19,7 @@ compile 'com.charliealbright:dark-sky-android:1.0.0'
 ### Simple Requests
 In your Activity, do the following to create the request service:
 
-```android
+```java
 Retrofit retrofit = new Retrofit.Builder()
 	.baseUrl("https://api.darksky.net")
 	.addConverterFactory(GsonConverterFactory.create())
@@ -30,13 +30,13 @@ DarkSkyService darkSkyService = retrofit.create(DarkSkyService.class);
 
 Then, make a call to the service like so:
 
-```android
+```java
 Call<Forecast> forecastCall = mDarkSkyService.getForecast("< Dark Sky Dev Key Here >", 30.9764799, -97.778059, null);
 forecastCall.enqueue(this);
 ```
 Capture the response of the call in the activity by implementing Callback interface:
 
-```android
+```java
 public class MainActivity extends AppCompatActivity implements Callback<Forecast> {
 
 	// Rest of Activity up here....
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements Callback<Forecast
 ### Advanced Requests
 Dark Sky supports a variety of query parameters to manipulate the content of the Forecast returned by their API. All query parameters are supported as of version 1.1.0. Here are some example usages:
 
-```android
+```java
 Map<String, String> queryMap = new HashMap<>();
 queryMap.put(Exclusion.HTTP_QUERY_KEY, Exclusion.MINUTELY.toString() + "," + Exclusion.FLAGS.toString()); // Exclude the "minutely" and "flags" block from the response
 queryMap.put(Language.HTTP_QUERY_KEY, Language.FRENCH.toString()); // Change language of response to French
@@ -72,9 +72,19 @@ queryMap.put(Forecast.EXTEND_HOURLY_KEY, Forecast.EXTEND_HOURLY_VALUE); // Exten
 
 Then, add the query parameters to the request:
 
-```android
+```java
 Call<Forecast> forecastCall = mDarkSkyService.getForecast("< Dark Sky Dev Key Here >", 30.9764799, -97.778059, queryMap);
 forecastCall.enqueue(this);
 ```
 
-Additional 
+### Time Machine Requests
+The Dark Sky API also allows requests for a specific time other than the current time, both in the past (observed) and the future (projected). Simply use the supplied request function and send along a UNIX timestamp of the desired date and time of forecasting:
+
+```java
+Call<Forecast> forecastCall = mDarkSkyService.getTimeMachineForecast("< Dark Sky Dev Key Here >",32.962892, -96.827938, 1478662075, queryMap);
+forecastCall.enqueue(this);
+```
+
+
+
+<div style="text-align:center"><img style="width:50%" src="https://raw.githubusercontent.com/charliealbright/DarkSkyAndroid/master/src/main/res/drawable/powered_by_dark_sky_single.png"/></div>
